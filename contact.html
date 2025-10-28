@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechVision Software</title>
+    <meta name="description" content="Get in touch with TechVision Software. We're here to help you transform your business with innovative technology solutions.">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo"><img src="tvv.png" alt=""></div>
+            <ul>
+                <li><a href="index.html#platform">Platform</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#solutions">Solutions</a></li>
+                <li><a href="index.html#insights">Insights</a></li>
+                <li><a href="contact.html" class="cta-button">Get Started</a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Let's Build Something Amazing Together</h1>
+            <p>Have a project in mind? We're here to turn your vision into reality. Reach out and let's start the conversation.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our team will get back to you within 24 hours</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="software-development">Software Development</option>
+                            <option value="cloud-solutions">Cloud Solutions</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="it-consulting">IT Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-10k">Under $10,000</option>
+                            <option value="10k-50k">$10,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-500k">$100,000 - $500,000</option>
+                            <option value="over-500k">Over $500,000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span>Subscribe to our newsletter for the latest updates and insights</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-wrapper">
+                <div class="contact-info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Visit Our Office</h3>
+                    <p>123 Innovation Drive<br>Tech Park, Silicon Valley<br>CA 94025, United States</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:hello@techvision.com">hello@techvision.com</a></p>
+                    <p><a href="mailto:support@techvision.com">support@techvision.com</a></p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+1-800-TECH-VIS">+1 (800) TECH-VIS</a></p>
+                    <p><a href="tel:+1-800-832-4847">+1 (800) 832-4847</a></p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="info-icon">🕐</div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+
+                <div class="contact-info-card social-card">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <div class="map-overlay">
+                <h3>Find Us on the Map</h3>
+                <p>123 Innovation Drive, Silicon Valley, CA 94025</p>
+                <a href="https://maps.google.com" target="_blank" class="map-button">Open in Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join 500+ companies that trust TechVision to power their digital transformation</p>
+            <div class="cta-buttons">
+                <a href="#contactForm" class="cta-btn primary">Get Started Now</a>
+                <a href="index.html" class="cta-btn secondary">Explore Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechVision Software</h3>
+                <p>Empowering businesses through innovative technology solutions since 2015.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Software Development</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
+                    <li><a href="#">Cybersecurity</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a href="#">AI & Machine Learning</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechVision Software. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
