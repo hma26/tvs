@@ -1,9 +1,28 @@
+//Platform section animation
+document.addEventListener('DOMContentLoaded', function () {
+
+    // --- Automatic Morphing Image Gallery ---
+    const slides = document.querySelectorAll('.morph-slide');
+    let currentSlide = 0;
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active');
+
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // 3000 milliseconds = 3 seconds
+
+});
+
 // Mobile Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('nav');
 
 if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function () {
         nav.classList.toggle('active');
     });
 }
@@ -11,16 +30,16 @@ if (menuToggle) {
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('nav ul li a');
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         nav.classList.remove('active');
     });
 });
 
 // Close mobile menu when clicking outside
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const isClickInsideNav = nav.contains(event.target);
     const isMenuToggle = event.target.classList.contains('menu-toggle');
-    
+
     if (!isClickInsideNav && !isMenuToggle && nav.classList.contains('active')) {
         nav.classList.remove('active');
     }
@@ -35,7 +54,7 @@ backToTopButton.setAttribute('aria-label', 'Back to top');
 document.body.appendChild(backToTopButton);
 
 // Show/hide back to top button on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     if (window.pageYOffset > 300) {
         document.body.classList.add('scrolled');
     } else {
@@ -44,7 +63,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Scroll to top when button is clicked
-backToTopButton.addEventListener('click', function() {
+backToTopButton.addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -53,10 +72,10 @@ backToTopButton.addEventListener('click', function() {
 
 // Add smooth scroll animation to all internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -72,7 +91,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -115,7 +134,7 @@ window.addEventListener('scroll', highlightNavigation);
 // Form submission handling (if you add a contact form)
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
         // Add your form submission logic here
         alert('Thank you for your message! We will get back to you soon.');
