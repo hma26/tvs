@@ -48,17 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }, 300);
                 }, 2000);
-            } else if (href.startsWith('/') || !href.startsWith('http')) {
-                // Handle internal navigation
-                e.preventDefault();
-                const path = href === '/' ? '/' : href.replace('.html', '');
-                window.history.pushState({}, '', path);
-                router();
-            }
-            // External links will work as normal
-        });
-    });
-});
             }
         });
     });

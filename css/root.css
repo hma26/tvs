@@ -50,6 +50,8 @@
     --radius-lg: 15px;
     --radius-xl: 20px;
     --radius-full: 50px;
+    /* Button radius (single place to tweak button rounding) */
+    --radius-button: 12px;
     
     /* Font Families */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -144,7 +146,7 @@ nav a:hover::after {
     background: var(--gradient-primary);
     color: var(--white) !important;
     padding: 0.75rem 1.8rem;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-button);
     transition: all var(--transition-base);
     box-shadow: var(--shadow-md);
 }
@@ -249,7 +251,7 @@ nav a:hover::after {
     color: var(--primary-blue);
     padding: 1.1rem 2.8rem;
     text-decoration: none;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-button);
     font-weight: 600;
     font-size: var(--font-lg);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -260,6 +262,18 @@ nav a:hover::after {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     background: var(--off-white);
+}
+
+/* Global button/link-button radius to ensure consistency across the site */
+button,
+input[type="button"],
+input[type="submit"],
+.cta-button,
+.hero-button,
+.learn-more,
+.read-more,
+.menu-toggle {
+    border-radius: var(--radius-button) !important;
 }
 
 /* Section Styles */
