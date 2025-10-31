@@ -545,7 +545,7 @@ nav a:hover::after {
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid var(--gray);
+    border: 2px solid var(--primary-blue);
     transition: all var(--transition-base);
 }
 
@@ -595,7 +595,10 @@ nav a:hover::after {
     color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
-    font-size: var(--font-sm);
+    font-size: var(--font-base);
+    padding: 8px 16px;
+    border: 2px solid var(--primary-blue);
+    border-radius: var(--radius-sm);
     transition: all var(--transition-base);
     display: inline-block;
 }
