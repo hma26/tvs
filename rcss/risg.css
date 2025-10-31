@@ -327,16 +327,22 @@ nav a:hover::after {
 }
 
 .read-more-btn {
-    color: var(--primary-blue);
+    color: var(--white);
+    background: var(--gradient-primary);
     font-weight: 600;
     text-decoration: none;
     transition: all var(--transition-base);
     width: fit-content;
     font-size: var(--font-base);
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    display: inline-block;
+    box-shadow: var(--shadow-md);
 }
 
 .read-more-btn:hover {
-    transform: translateX(5px);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Main Content Section */
@@ -1068,6 +1074,11 @@ html {
 
     .featured-content h2 {
         font-size: 1.5rem;
+    }
+
+    .read-more-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
 
     .article-meta {
