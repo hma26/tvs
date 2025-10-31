@@ -519,6 +519,7 @@ nav a:hover::after {
 .search-box {
     display: flex;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .search-box input {
@@ -529,6 +530,7 @@ nav a:hover::after {
     font-size: var(--font-sm);
     font-family: inherit;
     transition: all var(--transition-base);
+    min-width: 0; /* Prevents flex item from overflowing */
 }
 
 .search-box input:focus {
@@ -545,6 +547,10 @@ nav a:hover::after {
     cursor: pointer;
     transition: all var(--transition-base);
     font-size: 1.2rem;
+    min-width: 48px; /* Ensures tap target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-box button:hover {
@@ -1084,6 +1090,19 @@ html {
     .sidebar-widget {
         padding: 1.75rem;
     }
+    
+    .search-widget {
+        padding: 1.5rem;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .search-box input {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
 
     .newsletter-cta-form {
         flex-direction: column;
@@ -1282,10 +1301,18 @@ html {
         margin-bottom: 1rem;
     }
 
-    .search-box input,
-    .search-box button {
+    .search-box {
+        flex-wrap: nowrap;
+    }
+
+    .search-box input {
         padding: 0.6rem 0.85rem;
         font-size: 0.85rem;
+    }
+    
+    .search-box button {
+        padding: 0.6rem;
+        font-size: 1rem;
     }
 
     .popular-post-icon {
