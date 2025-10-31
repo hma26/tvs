@@ -402,46 +402,6 @@
         font-size: 1rem;
     }
     
-    /* Footer */
-    footer {
-        padding: 40px 15px 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-section {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .footer-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-    }
-    
-    .footer-section p,
-    .footer-section li a {
-        font-size: 0.9rem;
-    }
-    
-    .footer-section ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .footer-bottom {
-        padding: 20px 0 10px;
-        text-align: center;
-    }
-    
-    .footer-bottom p {
-        font-size: 0.85rem;
-        line-height: 1.8;
-    }
     
     /* Back to Top Button */
     .back-to-top {

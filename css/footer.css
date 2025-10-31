@@ -1,0 +1,202 @@
+/* Footer Styles - Identical interface across all devices */
+/* Imports color variables from root.css */
+
+footer {
+    background: linear-gradient(135deg, var(--text-dark) 0%, var(--text-medium) 100%);
+    color: var(--white);
+    padding: 5% 0 2.5% 0;
+    margin-top: 6%;
+}
+
+.footer-content {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4%;
+    padding: 0 2%;
+}
+
+.footer-section {
+    width: 100%;
+}
+
+.footer-section h3 {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    margin-bottom: 1.5em;
+    color: var(--primary-blue-light);
+    font-weight: 700;
+}
+
+.footer-section p {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: 1.7;
+    color: rgba(160, 174, 192, 0.9);
+    margin-bottom: 1em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8em;
+}
+
+.footer-section ul li a {
+    color: rgba(203, 213, 224, 0.9);
+    text-decoration: none;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    transition: all var(--transition-base);
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-blue-light);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3% 2% 1.5% 2%;
+    margin-top: 3%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: rgba(160, 174, 192, 0.8);
+    font-size: clamp(0.7rem, 1.3vw, 0.875rem);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Tablet Devices (Portrait) - 768px and below */
+/* Maintains 4-column layout but with responsive scaling */
+@media (max-width: 768px) {
+    footer {
+        padding: 5% 0 2.5% 0;
+        margin-top: 6%;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3%;
+        max-width: 92%;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(0.75rem, 2.2vw, 1.3rem);
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: clamp(0.65rem, 1.8vw, 1rem);
+    }
+
+    .footer-bottom {
+        padding: 3% 2% 1.5% 2%;
+        margin-top: 3%;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.6rem, 1.5vw, 0.875rem);
+    }
+}
+
+/* Mobile Devices - 480px and below */
+/* Still maintains 4-column layout with smaller scaling */
+@media (max-width: 480px) {
+    footer {
+        padding: 5% 0 2.5% 0;
+        margin-top: 6%;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5%;
+        max-width: 94%;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(0.65rem, 2.8vw, 1.3rem);
+        margin-bottom: 1.2em;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: clamp(0.55rem, 2.3vw, 1rem);
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.6em;
+    }
+
+    .footer-bottom {
+        padding: 3% 2% 1.5% 2%;
+        margin-top: 3%;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.55rem, 2vw, 0.875rem);
+    }
+}
+
+/* Large Desktop - 1920px and above */
+@media (min-width: 1920px) {
+    footer {
+        padding: 5% 0 2.5% 0;
+        margin-top: 6%;
+    }
+
+    .footer-content {
+        max-width: 88%;
+        gap: 4%;
+    }
+
+    .footer-bottom {
+        max-width: 88%;
+        padding: 3% 2% 1.5% 2%;
+        margin-top: 3%;
+    }
+}
+
+/* Small Mobile - 320px and below */
+@media (max-width: 320px) {
+    footer {
+        padding: 5% 0 2.5% 0;
+        margin-top: 6%;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2%;
+        max-width: 96%;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(0.5rem, 3.5vw, 1.3rem);
+        margin-bottom: 1em;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: clamp(0.45rem, 3vw, 1rem);
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.5em;
+    }
+
+    .footer-bottom {
+        padding: 3% 2% 1.5% 2%;
+        margin-top: 3%;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.45rem, 2.5vw, 0.875rem);
+    }
+}

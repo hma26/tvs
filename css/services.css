@@ -725,63 +725,6 @@ nav a:hover::after {
     background: var(--off-white);
 }
 
-/* Footer */
-footer {
-    background: var(--text-medium);
-    color: var(--white);
-    padding: 5rem 5% 2rem;
-    position: relative;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 4rem;
-    margin-bottom: 3rem;
-}
-
-.footer-section h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--primary-blue-light);
-}
-
-.footer-section p {
-    color: #a0aec0;
-    line-height: 1.7;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-section a {
-    color: #cbd5e0;
-    text-decoration: none;
-    transition: all var(--transition-base);
-    display: inline-block;
-}
-
-.footer-section a:hover {
-    color: var(--primary-blue-light);
-    transform: translateX(5px);
-}
-
-.footer-bottom {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-    color: #a0aec0;
-}
 
 /* Back to Top Button */
 .back-to-top {
