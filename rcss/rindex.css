@@ -1072,6 +1072,15 @@ html {
         padding: 1.5rem;
     }
     
+    .news-card {
+        border-width: 1.5px;
+    }
+    
+    .read-more {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+    }
+    
     footer {
         padding: 4rem 4% 2rem;
     }
@@ -1195,6 +1204,15 @@ html {
     
     .news-content {
         padding: 1.25rem;
+    }
+    
+    .news-card {
+        border-width: 1px;
+    }
+    
+    .read-more {
+        font-size: 0.9rem;
+        padding: 5px 12px;
     }
     
     .news-content h3 {
