@@ -1,0 +1,675 @@
+
+
+/* Large Desktop (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .solution-detail-content {
+        gap: 80px;
+    }
+}
+
+/* Desktop (1200px to 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Laptop/Small Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+    
+    .solution-detail-content {
+        gap: 50px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    /* Navigation */
+    nav {
+        position: relative;
+    }
+    
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1000;
+    }
+    
+    nav.active ul {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--primary-color, #2563eb);
+        background: none;
+        border: none;
+        padding: 5px 10px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px;
+        min-height: 60vh;
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    /* Solution Details */
+    .solution-detail-content {
+        flex-direction: column !important;
+        gap: 40px;
+    }
+    
+    .solution-detail.alternate .solution-detail-content {
+        flex-direction: column !important;
+    }
+    
+    .solution-detail-text,
+    .solution-detail-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .solution-detail {
+        padding: 60px 20px;
+    }
+    
+    /* Case Studies */
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Section Padding */
+    .section {
+        padding: 60px 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Landscape (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-study-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .stat {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+    /* Navigation */
+    .logo img {
+        max-height: 35px;
+    }
+    
+    .menu-toggle {
+        top: 15px;
+        right: 15px;
+        font-size: 1.6rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 60px 15px;
+        min-height: 50vh;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    /* Solution Details */
+    .solution-detail {
+        padding: 40px 15px;
+    }
+    
+    .solution-detail-content {
+        gap: 30px;
+    }
+    
+    .solution-badge {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        margin-bottom: 15px;
+    }
+    
+    .solution-detail h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .solution-intro {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-item {
+        padding: 20px;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .feature-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* Compliance Badges */
+    .compliance-badges {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .compliance-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    /* Solution CTA */
+    .solution-cta {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Image Placeholders */
+    .image-placeholder {
+        font-size: 4rem;
+        height: 250px;
+    }
+    
+    /* Case Studies */
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .case-study-card {
+        padding: 25px;
+    }
+    
+    .case-study-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .case-study-meta h3 {
+        font-size: 1.2rem;
+    }
+    
+    .industry-tag {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    .case-study-stats {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .stat {
+        text-align: left;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 8px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .case-study-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .benefit-card {
+        padding: 25px;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .benefit-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .benefit-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* Section Padding */
+    .section {
+        padding: 50px 15px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        padding: 50px 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 40px 15px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section p,
+    .footer-section li a {
+        font-size: 0.9rem;
+    }
+    
+    .footer-section ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-bottom {
+        padding: 20px 0 10px;
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .solution-detail h2 {
+        font-size: 1.35rem;
+    }
+    
+    .feature-icon {
+        font-size: 1.75rem;
+    }
+    
+    .image-placeholder {
+        font-size: 3rem;
+        height: 200px;
+    }
+    
+    .case-study-icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .benefit-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Landscape Orientation Fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    .menu-toggle,
+    .back-to-top,
+    .cta-section,
+    footer {
+        display: none;
+    }
+    
+    .hero {
+        page-break-after: avoid;
+    }
+    
+    .solution-detail,
+    .case-study-card,
+    .benefit-card {
+        page-break-inside: avoid;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .section {
+        padding: 20px 0;
+    }
+}
+
+/* High Resolution Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .image-placeholder,
+    .feature-icon,
+    .benefit-icon,
+    .case-study-icon {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment and customize if dark mode is needed
+    body {
+        background-color: #1a202c;
+        color: #e2e8f0;
+    }
+    
+    nav,
+    .solution-detail,
+    .case-study-card,
+    .benefit-card {
+        background-color: #2d3748;
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    }
+    */
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .solution-cta,
+    .case-study-link,
+    .cta-btn,
+    nav ul li a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .feature-item,
+    .benefit-card,
+    .case-study-card {
+        cursor: default;
+    }
+}
+
+/* Container Width Adjustments */
+@media (max-width: 1400px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (max-width: 991px) {
+    /* Ensure adequate tap targets on mobile */
+    a, button, .menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve readability */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Tablet Landscape Specific (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        min-height: 60vh;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* iPad Pro Portrait */
+@media (width: 1024px) and (height: 1366px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* iPad Pro Landscape */
+@media (width: 1366px) and (height: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

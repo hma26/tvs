@@ -1,0 +1,149 @@
+/* ========================================
+   ENHANCED NAVIGATION STYLES
+   Add this to your CSS or include as nav-enhanced.css
+   ======================================== */
+
+/* Smooth transitions for nav */
+nav {
+    transition: all var(--transition-base);
+}
+
+nav.scrolled {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Menu toggle animations */
+.menu-toggle {
+    transition: all var(--transition-base);
+}
+
+.menu-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Active link styling */
+nav a.active-link {
+    color: var(--primary-blue);
+}
+
+nav a.active-link::after {
+    width: 100%;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Mobile menu slide animation */
+@media (max-width: 991px) {
+    nav ul {
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    nav.active ul {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    /* Staggered fade-in for menu items */
+    nav.active ul li {
+        animation: fadeInDown 0.4s ease forwards;
+        opacity: 0;
+    }
+    
+    nav.active ul li:nth-child(1) { animation-delay: 0.1s; }
+    nav.active ul li:nth-child(2) { animation-delay: 0.15s; }
+    nav.active ul li:nth-child(3) { animation-delay: 0.2s; }
+    nav.active ul li:nth-child(4) { animation-delay: 0.25s; }
+    nav.active ul li:nth-child(5) { animation-delay: 0.3s; }
+    nav.active ul li:nth-child(6) { animation-delay: 0.35s; }
+    
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Mobile menu overlay backdrop */
+    nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Mobile menu container animation */
+    nav ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    nav.active ul {
+        max-height: 600px;
+    }
+}
+
+/* Hover effect enhancement */
+@media (min-width: 992px) {
+    nav a {
+        transition: all var(--transition-base), color 0.2s ease;
+    }
+    
+    nav a:hover {
+        color: var(--primary-blue);
+    }
+    
+    nav a.active-link {
+        font-weight: 600;
+    }
+}
+
+/* Focus styles for accessibility */
+nav a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--primary-blue);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -32,6 +32,7 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -39,17 +40,20 @@ nav .container {
     font-weight: 800;
     color: var(--primary-blue);
     letter-spacing: -0.5px;
+    z-index: 1001;
 }
 
 .logo img {
     height: 50px;
     width: auto;
+    display: block;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 2.5rem;
+    align-items: center;
 }
 
 nav a {
@@ -100,9 +104,18 @@ nav a:hover::after {
 
 .menu-toggle {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text-dark);
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    z-index: 1001;
+    transition: all var(--transition-base);
+}
+
+.menu-toggle:hover {
+    color: var(--primary-blue);
 }
 
 /* Hero Section */
@@ -168,7 +181,7 @@ nav a:hover::after {
 }
 
 .hero h1 {
-    font-size: var(--font-4xl);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1.5rem;
     font-weight: 800;
     line-height: 1.15;
@@ -176,7 +189,7 @@ nav a:hover::after {
 }
 
 .hero p {
-    font-size: var(--font-xl);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     opacity: 0.95;
     font-weight: 300;
     line-height: 1.7;
@@ -215,7 +228,7 @@ nav a:hover::after {
 }
 
 .form-header h2 {
-    font-size: var(--font-3xl);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--text-dark);
     margin-bottom: 0.8rem;
     font-weight: 800;
@@ -224,7 +237,7 @@ nav a:hover::after {
 
 .form-header p {
     color: var(--dark-gray);
-    font-size: var(--font-base);
+    font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.6;
 }
 
@@ -263,6 +276,7 @@ nav a:hover::after {
     color: var(--text-medium);
     transition: all var(--transition-base);
     background: var(--off-white);
+    width: 100%;
 }
 
 .form-group input:focus,
@@ -286,11 +300,12 @@ nav a:hover::after {
 
 .checkbox-label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.8rem;
     cursor: pointer;
     font-weight: 400;
     color: var(--darker-gray);
+    font-size: var(--font-sm);
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -298,6 +313,8 @@ nav a:hover::after {
     height: 20px;
     cursor: pointer;
     accent-color: var(--primary-blue);
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .submit-button {
@@ -312,11 +329,17 @@ nav a:hover::after {
     transition: all var(--transition-base);
     box-shadow: var(--shadow-md);
     margin-top: 1rem;
+    width: 100%;
+    min-height: 50px;
 }
 
 .submit-button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+.submit-button:active {
+    transform: translateY(0);
 }
 
 /* Contact Info Cards */
@@ -354,7 +377,7 @@ nav a:hover::after {
 }
 
 .contact-info-card h3 {
-    font-size: var(--font-xl);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--text-dark);
     margin-bottom: 0.8rem;
     font-weight: 700;
@@ -364,6 +387,7 @@ nav a:hover::after {
     color: var(--dark-gray);
     line-height: 1.8;
     margin-bottom: 0.3rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .contact-info-card a {
@@ -371,6 +395,7 @@ nav a:hover::after {
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-base);
+    word-break: break-word;
 }
 
 .contact-info-card a:hover {
@@ -445,17 +470,19 @@ nav a:hover::after {
     text-align: center;
     color: var(--white);
     z-index: 1;
+    padding: 0 1rem;
+    max-width: 90%;
 }
 
 .map-overlay h3 {
-    font-size: var(--font-3xl);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 1rem;
     letter-spacing: -0.5px;
 }
 
 .map-overlay p {
-    font-size: var(--font-lg);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 2rem;
     opacity: 0.95;
 }
@@ -464,12 +491,13 @@ nav a:hover::after {
     display: inline-block;
     background: var(--white);
     color: var(--primary-blue);
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     border-radius: var(--radius-full);
     font-weight: 600;
     transition: all var(--transition-base);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .map-button:hover {
@@ -484,7 +512,7 @@ nav a:hover::after {
 }
 
 .cta-content h2 {
-    font-size: var(--font-3xl);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     color: var(--text-dark);
     margin-bottom: 1rem;
     font-weight: 800;
@@ -492,9 +520,12 @@ nav a:hover::after {
 }
 
 .cta-content p {
-    font-size: var(--font-lg);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: var(--dark-gray);
     margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-buttons {
@@ -510,8 +541,10 @@ nav a:hover::after {
     text-decoration: none;
     border-radius: var(--radius-full);
     font-weight: 600;
-    font-size: var(--font-lg);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     transition: all var(--transition-base);
+    min-width: 180px;
+    text-align: center;
 }
 
 .cta-btn.primary {
@@ -557,7 +590,7 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 1.5rem;
-    font-size: var(--font-xl);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     font-weight: 700;
     color: var(--primary-blue-light);
 }
@@ -565,6 +598,7 @@ footer {
 .footer-section p {
     color: #a0aec0;
     line-height: 1.7;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .footer-section ul {
@@ -580,6 +614,7 @@ footer {
     text-decoration: none;
     transition: all var(--transition-base);
     display: inline-block;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .footer-section a:hover {
@@ -594,18 +629,19 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
     color: #a0aec0;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
 }
 
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
     background: var(--gradient-primary);
     color: var(--white);
     padding: 0.9rem 1.1rem;
     border-radius: 50%;
-    font-size: var(--font-xl);
+    font-size: 1.3rem;
     box-shadow: var(--shadow-lg);
     cursor: pointer;
     display: none;
@@ -632,131 +668,6 @@ body.scrolled .back-to-top {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    nav .container {
-        flex-wrap: wrap;
-    }
-    
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 5%;
-        top: 1.2rem;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        padding: 1.5rem 5%;
-        gap: 1rem;
-    }
-
-    nav.active ul {
-        display: flex;
-    }
-
-    .hero {
-        padding: 6rem 5% 5rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .section {
-        padding: 4rem 5%;
-    }
-
-    .contact-form-wrapper {
-        padding: 2rem;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-content h2 {
-        font-size: 2rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta-btn {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
-
-    .map-section {
-        height: 400px;
-    }
-
-    .map-overlay h3 {
-        font-size: 1.5rem;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    .footer-section a:hover {
-        transform: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .form-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .contact-form-wrapper {
-        padding: 1.5rem;
-    }
-
-    .contact-info-card {
-        padding: 1.5rem;
-    }
-
-    .map-section {
-        height: 300px;
-    }
-
-    .map-overlay h3 {
-        font-size: 1.3rem;
-    }
-
-    .map-overlay p {
-        font-size: 1rem;
     }
 }
 
@@ -787,4 +698,498 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-blue-dark);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .contact-container {
+        gap: 5rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 3.5rem;
+    }
+}
+
+/* Medium Desktops/Laptops (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .contact-container {
+        gap: 3rem;
+    }
+    
+    .section {
+        padding: 5rem 5%;
+    }
+}
+
+/* Large Tablets (992px - 1023px) */
+@media (max-width: 1023px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-info-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    nav .container {
+        flex-wrap: wrap;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 2rem 5%;
+        gap: 1.5rem;
+        border-top: 1px solid var(--gray);
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem;
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.8rem;
+    }
+
+    .hero {
+        padding: 6rem 5% 5rem;
+    }
+
+    .section {
+        padding: 4rem 5%;
+    }
+
+    .contact-form-wrapper {
+        padding: 2.5rem;
+    }
+    
+    .contact-info-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .map-section {
+        height: 400px;
+    }
+    
+    .footer-content {
+        gap: 3rem;
+    }
+}
+
+/* Large Phones (576px - 767px) */
+@media (max-width: 767px) {
+    .hero {
+        padding: 5rem 5% 4rem;
+    }
+    
+    .section {
+        padding: 3rem 5%;
+    }
+
+    .contact-form-wrapper {
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-info-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.75rem;
+    }
+    
+    .info-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+    
+    .map-section {
+        height: 350px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .footer-section a:hover {
+        transform: none;
+    }
+    
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 0.75rem 0.95rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Medium Phones (480px - 575px) */
+@media (max-width: 575px) {
+    nav {
+        padding: 1rem 4%;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .menu-toggle {
+        font-size: 1.5rem;
+        right: 4%;
+    }
+    
+    .hero {
+        padding: 4rem 4% 3rem;
+    }
+    
+    .section {
+        padding: 2.5rem 4%;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.75rem;
+        border-radius: 15px;
+    }
+    
+    .form-header {
+        margin-bottom: 2rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .submit-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+    
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .social-links {
+        gap: 0.75rem;
+    }
+    
+    .social-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .map-section {
+        height: 300px;
+    }
+    
+    .map-button {
+        padding: 0.85rem 1.5rem;
+    }
+    
+    footer {
+        padding: 4rem 4% 2rem;
+    }
+    
+    .footer-content {
+        gap: 2rem;
+    }
+}
+
+/* Small Phones (375px - 479px) */
+@media (max-width: 479px) {
+    nav {
+        padding: 0.9rem 4%;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    nav ul {
+        padding: 1.5rem 4%;
+    }
+    
+    .hero {
+        padding: 3.5rem 4% 2.5rem;
+    }
+    
+    .hero h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 4%;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .form-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
+        gap: 0.25rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .checkbox-label {
+        font-size: 0.85rem;
+    }
+    
+    .submit-button {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+        margin-top: 0.75rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.25rem;
+    }
+    
+    .map-section {
+        height: 280px;
+    }
+    
+    .cta-content p {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-btn {
+        padding: 0.95rem 2rem;
+        min-width: unset;
+    }
+    
+    footer {
+        padding: 3rem 4% 1.5rem;
+    }
+    
+    .back-to-top {
+        bottom: 12px;
+        right: 12px;
+        padding: 0.65rem 0.85rem;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Phones (320px - 374px) */
+@media (max-width: 374px) {
+    .logo img {
+        height: 30px;
+    }
+    
+    .hero {
+        padding: 3rem 4% 2rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 1.25rem;
+    }
+    
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.7rem 0.85rem;
+        font-size: 0.875rem;
+    }
+    
+    .submit-button {
+        padding: 0.85rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info-card {
+        padding: 1rem;
+    }
+    
+    .info-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .map-section {
+        height: 250px;
+    }
+    
+    .map-overlay h3 {
+        font-size: 1.25rem;
+    }
+    
+    .map-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .cta-btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        padding: 4rem 5% 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section {
+        padding: 3rem 5%;
+    }
+    
+    .map-section {
+        height: 400px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase tap targets for mobile */
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .submit-button,
+    .cta-btn,
+    nav a,
+    .social-link,
+    .map-button {
+        min-height: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .contact-info-card:hover,
+    .news-card:hover {
+        transform: none;
+    }
+    
+    /* Improve button feedback */
+    .submit-button:active,
+    .cta-btn:active {
+        opacity: 0.8;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .menu-toggle,
+    .back-to-top,
+    nav,
+    .hero,
+    .map-section,
+    .cta-section,
+    footer {
+        display: none;
+    }
+    
+    .contact-section {
+        background: white;
+    }
+    
+    .contact-container {
+        display: block;
+    }
+    
+    .contact-form-wrapper,
+    .contact-info-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
 }
